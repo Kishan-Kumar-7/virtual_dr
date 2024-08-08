@@ -61,6 +61,11 @@ h1 {
 ----------------------------------------------------*/
 .squeres:nth-child(-n+4):hover{
     background-image: url(../Images/Icons/icons2.png);
+    transform: scale(.5);
+    animation-name: race;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5,.2,.3,2);
 }
 .squeres:nth-child(1):hover {
     background-color: #13b4ff;
@@ -76,4 +81,16 @@ h1 {
 
 .squeres:nth-child(4):hover {
     background-color: #77b800;
+}
+/*------------------------------------------------------
+    HOVER ANIMATION EFFECT
+-------------------------------------------------------*/
+@keyframes race{
+    0%, 100% {
+        transform: translateY(0px);
+        background-image: url(../Images/Icons/icons2.png);
+    }
+    50%{
+        transform: translateY(340px);
+    }
 }
